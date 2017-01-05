@@ -1,10 +1,5 @@
-class CreateJobs < ActiveRecord::Migration[5.0]
+class AddIsAdminToUser < ActiveRecord::Migration[5.0]
   def change
-    create_table :jobs do |t|
-      t.string :title
-      t.text :description
-
-      t.timestamps
-    end
+    add_column :users, :is_admin, :boolean, default: false
   end
 end
