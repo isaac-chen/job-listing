@@ -18,5 +18,13 @@
       <%= job.created_at %>
     </td>
   </tr>
+
+  <td>
+    <%= render_job_status(job) %>
+
+      <%= link_to(job.title, admin_job_path(job)) %>
+
+      </td>
+
   <% end %>
 </table>
